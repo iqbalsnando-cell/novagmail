@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101426">
+  <title>NovaMail — Demo Workspace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="NovaMail beranda">
+        <span class="brand-mark">N</span><span>nova<span class="brand-light">mail</span></span>
+      </a>
+      <div class="workspace-label">WORKSPACE DEMO</div>
+      <nav class="side-nav" aria-label="Navigasi utama">
+        <button class="nav-item active" data-view="overview"><span>▦</span> Ringkasan</button>
+        <button class="nav-item" data-view="accounts"><span>✉</span> Kotak masuk demo <b class="nav-count">4</b></button>
+        <button class="nav-item" data-view="activity"><span>◷</span> Aktivitas</button>
+        <button class="nav-item" data-view="settings"><span>⚙</span> Pengaturan</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">✦</span><b>Butuh bantuan?</b><p>Jelajahi workspace demo ini dengan aman.</p><button class="text-button" data-view="help">Lihat panduan ↗</button></div>
+        <div class="profile-mini"><div class="avatar">D</div><div><strong>Demo User</strong><small>Mode pratinjau</small></div><span class="online-dot"></span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Buka navigasi">☰</button>
+        <div class="crumb">Workspace <span>/</span> <strong id="crumbTitle">Ringkasan</strong></div>
+        <div class="top-actions"><span class="demo-pill"><i></i> MODE DEMO</span><button class="icon-button" id="themeToggle" title="Ganti tema" aria-label="Ganti tema">◐</button><div class="avatar small">D</div></div>
+      </header>
+
+      <section class="content">
+        <div class="welcome-row">
+          <div><p class="eyebrow">SENANG MELIHATMU KEMBALI</p><h1 id="pageTitle">Selamat datang, Demo User <span>✦</span></h1><p class="muted" id="pageSubtitle">Ini adalah ruang kerja contoh untuk menjelajahi fitur NovaMail.</p></div>
+          <button class="primary-button" id="quickAction">＋ Buat catatan demo</button>
+        </div>
+
+        <div id="view-overview" class="view active-view">
+          <div class="stat-grid">
+            <article class="stat-card"><div class="stat-top"><span>Total pesan demo</span><span class="stat-icon violet">✉</span></div><div class="stat-number">128</div><div class="stat-foot"><span class="trend">↗ 12%</span> dibanding periode lalu</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Belum dibaca</span><span class="stat-icon blue">◉</span></div><div class="stat-number">04</div><div class="stat-foot">Pesan contoh tersedia</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Aktivitas minggu ini</span><span class="stat-icon mint">⌁</span></div><div class="stat-number">36</div><div class="stat-foot"><span class="trend">↗ 8%</span> aktivitas simulasi</div></article>
+          </div>
+          <div class="section-grid">
+            <article class="panel activity-panel">
+              <div class="panel-heading"><div><h2>Aktivitas workspace</h2><p>Ringkasan aktivitas simulasi selama 7 hari</p></div><span class="soft-chip">7 hari terakhir</span></div>
+              <div class="chart" aria-label="Grafik aktivitas demo">
+                <div class="chart-y"><span>40</span><span>30</span><span>20</span><span>10</span><span>0</span></div>
+                <div class="chart-main"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><div class="bars"><div class="bar-wrap"><b style="height:36%"></b><small>Sen</small></div><div class="bar-wrap"><b style="height:58%"></b><small>Sel</small></div><div class="bar-wrap"><b style="height:44%"></b><small>Rab</small></div><div class="bar-wrap"><b style="height:77%"></b><small>Kam</small></div><div class="bar-wrap"><b style="height:62%"></b><small>Jum</small></div><div class="bar-wrap"><b style="height:91%"></b><small>Sab</small></div><div class="bar-wrap"><b style="height:69%"></b><small>Min</small></div></div></div>
+              </div>
+            </article>
+            <article class="panel quick-panel"><div class="panel-heading"><div><h2>Akses cepat</h2><p>Pilih bagian untuk dijelajahi</p></div></div><button class="quick-link" data-view="accounts"><span class="quick-symbol purple">✉</span><span><b>Kotak masuk demo</b><small>Lihat pesan contoh</small></span><span class="arrow">↗</span></button><button class="quick-link" data-view="activity"><span class="quick-symbol cyan">◷</span><span><b>Riwayat aktivitas</b><small>Periksa aktivitas simulasi</small></span><span class="arrow">↗</span></button><button class="quick-link" data-view="settings"><span class="quick-symbol orange">⚙</span><span><b>Pengaturan</b><small>Atur preferensi lokal</small></span><span class="arrow">↗</span></button></article>
+          </div>
+          <article class="panel recent-panel"><div class="panel-heading"><div><h2>Pesan terbaru</h2><p>Pesan contoh — bukan email sungguhan</p></div><button class="text-button" data-view="accounts">Lihat semua →</button></div><div class="message-list">
+            <button class="message-row" data-message="0"><span class="sender-avatar lavender">N</span><span class="message-copy"><b>NovaMail Team</b><span>Selamat datang di workspace demo</span></span><time>09:41</time><i class="unread"></i></button>
+            <button class="message-row" data-message="1"><span class="sender-avatar peach">D</span><span class="message-copy"><b>Demo Updates</b><span>Fitur baru yang bisa kamu coba</span></span><time>Kemarin</time></button>
+            <button class="message-row" data-message="2"><span class="sender-avatar mint">S</span><span class="message-copy"><b>Sample Notification</b><span>Preferensi workspace berhasil disimulasikan</span></span><time>Sen</time></button>
+          </div></article>
+        </div>
+
+        <div id="view-accounts" class="view">
+          <article class="panel"><div class="panel-heading"><div><h2>Kotak masuk demo</h2><p>Semua pesan di bawah adalah data contoh lokal.</p></div><label class="search-box">⌕ <input id="messageSearch" placeholder="Cari pesan..." aria-label="Cari pesan"></label></div><div id="allMessages" class="message-list full-messages"></div></article>
+        </div>
+        <div id="view-activity" class="view"><article class="panel"><div class="panel-heading"><div><h2>Riwayat aktivitas</h2><p>Log simulasi pada browser ini.</p></div><span class="soft-chip">Lokal</span></div><div class="timeline" id="timeline"></div></article></div>
+        <div id="view-settings" class="view"><article class="panel settings-panel"><div class="panel-heading"><div><h2>Pengaturan workspace</h2><p>Preferensi ini hanya berlaku di halaman demo.</p></div></div><label class="setting-row"><span><b>Notifikasi demo</b><small>Tampilkan pemberitahuan simulasi</small></span><input type="checkbox" id="notifications" checked><i class="switch"></i></label><label class="setting-row"><span><b>Ringkasan mingguan</b><small>Aktifkan ringkasan aktivitas contoh</small></span><input type="checkbox" id="weekly" checked><i class="switch"></i></label><div class="notice"><b>Privasi demo</b><p>Website ini tidak terhubung ke Google, tidak meminta kredensial Google, dan tidak mengirim data ke server. Hindari memasukkan kata sandi atau informasi pribadi.</p></div><button class="primary-button" id="saveSettings">Simpan preferensi</button></article></div>
+        <div id="view-help" class="view"><article class="panel help-content"><div class="panel-heading"><div><h2>Panduan singkat</h2><p>Kenali workspace NovaMail.</p></div></div><h3>Ini hanya demo antarmuka</h3><p>Gunakan menu samping untuk membuka ringkasan, kotak masuk contoh, aktivitas, dan pengaturan.</p><p>Tombol buat catatan akan menambahkan catatan lokal ke riwayat aktivitas. Tidak ada layanan email sungguhan yang terhubung.</p><button class="primary-button" data-view="overview">Kembali ke ringkasan</button></article></div>
+        <footer>© 2026 NovaMail Demo <span>•</span> Dibuat untuk demonstrasi antarmuka</footer>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="messageModal" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="closeModal" aria-label="Tutup">×</button><div class="modal-label">PESAN DEMO</div><h2 id="modalTitle">Judul pesan</h2><p class="modal-from" id="modalFrom"></p><div class="modal-body" id="modalBody"></div><button class="primary-button" id="modalDone">Mengerti</button></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
